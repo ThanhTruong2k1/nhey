@@ -12,7 +12,7 @@ app.use(express.urlencoded({extended:true}));
 app.get("/",(req,res)=>{
     res.json({message : "Welcome to contact book application"});
 });
-//setupContactRouters(app);
+setupContactRouters(app);
 
 app.use((req,res,next)=>{
     next(new BadRequestError(404,"Resource not found"));
